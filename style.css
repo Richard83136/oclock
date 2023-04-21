@@ -1,14 +1,14 @@
 body {
-    font-family: system-ui;
+    
     background-image: url('chronos.jpg');
-    width:100%;
+    width:98%;
     height:auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    margin-bottom:50px;
+    
 }
 
 button {

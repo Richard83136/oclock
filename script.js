@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if( bMinutes.value == 0 && bSeconds.value == 0){
             minuteurStopAlert()
             
-            bMinutes.value = 10;
+            bMinutes.value = 5;
             bSeconds.value = 0;
             minuteurStop()
         } else if(bSeconds.value != 0){
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
         function startInterval(){
             beginTimer = setInterval(function(){
                 minuteurTimer();
-            }, 1000)
+            },500)
         }
         startInterval()
     })
