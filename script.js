@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let stop = document.getElementById("stop")
     let reset = document.getElementById("reset")
     let lap = document.getElementById("lap")
+    let total = document.getElementById("total")
 
     let min = 0
     let sec = 0
@@ -148,7 +149,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function lapTimer(){
         lap.addEventListener("click",()=>{
-            lap.innerHTML += "<div>" + min + ":" + sec + "</div>";
+            total.innerHTML += "<div>" + min + ":" + sec + "</div>";
+            total.style.border = "1px solid black ";
+            total.style.backgroundColor = "#3FBFBF";
+            total.style.color ="black";
+            
+            
         })
     }
         lapTimer() 
@@ -156,15 +162,15 @@ document.addEventListener("DOMContentLoaded", () => {
 //// MINUTEUR ////
     let bStart = document.getElementById("bStart")
     let bReset = document.getElementById("bReset")
-    let bHours = document.getElementById("bHours")
+    // let bHours = document.getElementById("bHours")
     let bMinutes = document.getElementById("bMinutes")
     let bSeconds = document.getElementById("bSeconds")
     let beginTimer = null
 
     function minuteurTimer(){
-        if(bHours.value == 0 && bMinutes.value == 0 && bSeconds.value == 0){
+        if( bMinutes.value == 0 && bSeconds.value == 0){
             minuteurStopAlert()
-            bHours.value = 0;
+            
             bMinutes.value = 10;
             bSeconds.value = 0;
             minuteurStop()
@@ -182,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function minuteurStopAlert(){
-        if(bHours.value == 0 && bMinutes.value == 0 && bSeconds.value == 0){
+        if( bMinutes.value == 0 && bSeconds.value == 0){
             alert("Time's up !")            
             return
         }
@@ -202,8 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     bReset.addEventListener('click', function(){
-        bHours.value = 0
-        bMinutes.value = 10
+        
+        bMinutes.value = 5
         bSeconds.value = 0
         minuteurStop()
     })

@@ -1,6 +1,11 @@
 body {
     font-family: system-ui;
-    background: rgb(206, 201, 201);
+    background-image: url('chronos.jpg');
+    width:100%;
+    height:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
     margin-bottom:50px;
@@ -21,4 +26,13 @@ button {
     display: flex;
     width: 25%;
     align-items: flex-end;
+}
+#container2>button{
+    margin-top:10px;
+}
+.jour>input{
+    background-color: rgb(236, 217, 193);
+    border-radius: 10px;
+    padding: 10px;
+    
 }
